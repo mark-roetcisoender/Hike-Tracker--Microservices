@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}Home{% endblock title %}</h2>
+{% endblock header %}
+{% block content %}
+<p>
+    <h3>Welcome to Hike Tracker!</h3>
+    <h4>To Get Started, Click 'Add Hike'</h4>
+</p>
+  <p>
+    Or, hover over a menu option for a brief explanation of each feature, or visit <a href="{{ url_for('pages.about') }}">Help</a> for an
+    in depth tutorial.
+  </p>
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}Stats{% endblock title %}</h2>
+{% endblock header %}
+{% block content %}
+  <p>
+    Your total and cumulative stats are below! Stats are listed in miles (distances) and feet (elevation).
+  </p>
+  <body>
+    <h2>Cumulative Stats</h2>
+    <table>
+        <thead>
+            <th>Total Hikes</th>
+            <th>Total Distance</th>
+            <th>Total Elevation Gain</th>
+            <th>Average Distance</th>
+            <th>Average Elevation Gain</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{cumulative_stats[0]}}</td>
+                <td>{{cumulative_stats[1]}}</td>
+                <td>{{cumulative_stats[2]}}</td>
+                <td>{{cumulative_stats[3]}}</td>
+                <td>{{cumulative_stats[4]}}</td>
+            </tr>
+        </tbody>
+    </table>
+  </body>
+{% endblock content %}

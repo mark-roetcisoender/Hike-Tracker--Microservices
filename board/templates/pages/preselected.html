@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}Add Existing Hike{% endblock title %}</h2>
+
+{% endblock header %}
+{% block content %}
+<h3>Choose from Existing Hikes</h3>
+  <p>
+    <!-- Learn more about this project by visiting the <a href="{{ url_for('pages.about') }}">About page</a>. -->
+     <form action="{{ url_for("pages.preselected")}}" method="post">
+        <input type="radio" id="saddle_mountain" name="hikes" value="saddle_mountain">
+        <label for="saddle_mountain">Saddle Mountain</label><br>
+        <input type="radio" id="warrior_point" name="hikes" value="warrior_point">
+        <label for="warrior_point">Warrior Point</label><br>
+        <input type="radio" id="triple_falls" name="hikes" value="triple_falls">
+        <label for="triple_falls">Triple Falls</label><br>
+        <input type="radio" id="ape_caves" name="hikes" value="ape_caves">
+        <label for="ape_caves">Ape Caves</label><br>
+        <input type="submit" value="Submit" onclick="return confirm('Please confirm submission')">
+    </form>
+
+  </p>
+{% endblock content %}

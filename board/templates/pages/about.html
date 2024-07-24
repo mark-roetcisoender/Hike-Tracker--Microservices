@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}About{% endblock title %}</h2>
+{% endblock header %}
+{% block content %}
+<h3>Answers to some common questions are below</h3>
+<h4>Don't see your question? Please reach out to help@hiketracker.com. We'll respond within 2 business days. Thank you!</h4>
+  <h5><strong>How do I add a hike?</strong></h5>
+  <p>
+    Navigate to "Add Hike." You'll have the option to either manually enter a hike, or select a hike from a list of hikes already
+     entered. Once the addition is complete, you'll see a success message.
+  </p>
+  <h5><strong>Where can I see my hikes?</strong></h5>
+  <p>
+    Navigate to "Hike Log." You'll be able to see a list of hikes that you've logged, along with their stats.
+  </p>
+  <h5><strong>Where can I see my cumulative stats?</strong></h5>
+  <p>
+    Navigate to "Stats." You'll be able to see a list of stats compileds from your logged hikes, including the overall number of hikes, the 
+    total distance traveled, the total elevation gain, the average distance per hike, and the average elevation gained per hike.
+  </p>
+{% endblock content %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}Add{% endblock title %}</h2>
+
+{% endblock header %}
+{% block content %}
+  <p>
+    <h3>Please Select Preselected or Manual Entry</h3>
+    <!-- Learn more about this project by visiting the <a href="{{ url_for('pages.about') }}">About page</a>. -->
+    <a href="{{ url_for('pages.preselected') }}">
+        <button>Preselected</button>
+    </a>
+    <a href="{{ url_for('pages.manual') }}">
+        <button>Manual Entry</button>
+    </a>
+
+  </p>
+{% endblock content %}

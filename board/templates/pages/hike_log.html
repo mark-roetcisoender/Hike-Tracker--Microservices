@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}Hike Log{% endblock title %}</h2>
+{% endblock header %}
+{% block content %}
+  <p>
+    Your entered hikes are below!
+  </p>
+  <body>
+    <table>
+        <thead>
+            <th>Select</th>
+            <th>Hike Name</th>
+            <th>Distance</th>
+            <th>Elevation Gain</th>
+            <th>Delete Hike</th>
+        </thead>
+        <tbody>
+            {% for row in hike_log %}
+            <tr>
+              <form action="{{ url_for("pages.hikelog")}}" method="post">
+                <td><input type="radio" id="{{row[0]}}" name="hikes" value="{{row[0]}}" required></td>
+                <td><label for="ape_caves">{{row[0]}}</label></td>
+                <td>{{row[1]}}</td>
+                <td>{{row[2]}}</td>
+                <td>    
+                    <input type="submit" value="Delete" onclick="return confirm('Please confirm submission. This action cannot be undone.')">
+                </td>
+              </form>
+            </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+  </body>
+{% endblock content %}
