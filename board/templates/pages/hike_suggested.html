@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}Hike Generator{% endblock title %}</h2>
+{% endblock header %}
+{% block content %}
+<h3>Here is your suggested hike based on your current hike log!</h3>
+<h4>Update your hike log to receive a new suggestion</h4>
+<table>
+    <thead>
+        <th>Hike Name</th>
+        <th>Distance</th>
+        <th>Elevation Gain</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{suggestion.Name}}</td>
+            <td>{{suggestion.Distance}}</td>
+            <td>{{suggestion.Elevation}}</td>
+        </tr>
+    </tbody>
+</table>
+{% endblock content %}

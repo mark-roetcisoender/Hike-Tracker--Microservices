@@ -3,8 +3,8 @@
   <h2>{% block title %}About{% endblock title %}</h2>
 {% endblock header %}
 {% block content %}
-<h3>Answers to some common questions are below</h3>
-<h4>Don't see your question? Please reach out to help@hiketracker.com. We'll respond within 2 business days. Thank you!</h4>
+<h3>Please select a topic to learn more about it</h3>
+<!-- <h4>Don't see your question? Please reach out to help@hiketracker.com. We'll respond within 2 business days. Thank you!</h4>
   <h5><strong>How do I add a hike?</strong></h5>
   <p>
     Navigate to "Add Hike." You'll have the option to either manually enter a hike, or select a hike from a list of hikes already
@@ -18,5 +18,23 @@
   <p>
     Navigate to "Stats." You'll be able to see a list of stats compileds from your logged hikes, including the overall number of hikes, the 
     total distance traveled, the total elevation gain, the average distance per hike, and the average elevation gained per hike.
-  </p>
+  </p> -->
+  <h5>What Topic Would you like more information about?</h5>
+  <form action="{{ url_for("pages.about")}}" method="post">
+    <input type="radio" id="add" name="help" value="add">
+    <label for="add">Add Hike</label><br>
+    <input type="radio" id="view" name="help" value="view" >
+    <label for="view">Hike Log</label><br>
+    <input type="radio" id="find" name="help" value="find">
+    <label for="find">Find Hike</label><br>
+    <input type="radio" id="stats" name="help" value="stats">
+    <label for="stats">Cumulative Stats</label><br>
+    <input type="radio" id="wl" name="help" value="wl">
+    <label for="wl">Wishlist</label><br>
+    <input type="submit" value="Submit" onclick="return confirm('Please confirm submission')">
+</form>
+
+<p>Don't see your question? Please reach out to help@hiketracker.com. We'll respond within 2 business days. Thank you!</p>
+
+
 {% endblock content %}

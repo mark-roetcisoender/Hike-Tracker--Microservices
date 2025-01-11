@@ -3,25 +3,9 @@
   <h2>{% block title %}Hike Log{% endblock title %}</h2>
 {% endblock header %}
 {% block content %}
-  <p>
-    No hikes are currently entered! Vist 'Add Hike' to start!
-  </p>
   <body>
-    <table>
-        <thead>
-            <th>Hike Name</th>
-            <th>Distance</th>
-            <th>Elevation Gain</th>
-        </thead>
-        <tbody>
-            {% for row in hike_log %}
-            <tr>
-                <td>{{row[0]}}</td>
-                <td>{{row[1]}}</td>
-                <td>{{row[2]}}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+    <p>
+      No hikes are currently entered! Vist 'Add Hike' to start!
+    </p>
   </body>
 {% endblock content %}

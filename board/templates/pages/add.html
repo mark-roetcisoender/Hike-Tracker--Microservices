@@ -6,13 +6,18 @@
 {% block content %}
   <p>
     <h3>Please Select Preselected or Manual Entry</h3>
-    <!-- Learn more about this project by visiting the <a href="{{ url_for('pages.about') }}">About page</a>. -->
-    <a href="{{ url_for('pages.preselected') }}">
-        <button>Preselected</button>
+    <p>    
+      <a href="{{ url_for('pages.preselected') }}">
+      <button>Choose From a List</button>
+      </a>
+    </p>
+
+    <p>
+      <a href="{{ url_for('pages.manual') }}">
+        <button>Manually Enter My Own Hike</button>
     </a>
-    <a href="{{ url_for('pages.manual') }}">
-        <button>Manual Entry</button>
-    </a>
+    </p>
+
 
   </p>
 {% endblock content %}

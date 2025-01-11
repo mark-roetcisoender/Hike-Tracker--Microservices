@@ -2,6 +2,8 @@
 from flask import Flask
 from board import pages
 
+# flask --app board run --debug 
+
 def create_app(test_config=None):
     """docstring"""
     # create and configure the app

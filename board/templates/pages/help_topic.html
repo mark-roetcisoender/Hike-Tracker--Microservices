@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}About{% endblock title %}</h2>
+{% endblock header %}
+{% block content %}
+<p>{{response}}</p>
+
+<a href="{{ url_for('pages.about') }}">
+    <button>Back to About Page</button>
+</a>
+
+<p>Don't see your question? Please reach out to help@hiketracker.com. We'll respond within 2 business days. Thank you!</p>
+
+{% endblock content %}

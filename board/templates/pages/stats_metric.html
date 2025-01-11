@@ -4,8 +4,8 @@
 {% endblock header %}
 {% block content %}
   <p>
-    Your total and cumulative stats are below! Stats are listed in miles (distances) and feet (elevation). Click 'Convert' to see
-    your stats in metric.
+    Your total and cumulative stats are below! Stats are listed in kilometers (distances) and meters (elevation). Click 'Convert' to see
+    your stats in miles and feet.
   </p>
   <body>
     <h2>Cumulative Stats</h2>
@@ -28,8 +28,8 @@
         </tbody>
     </table>
     <p>
-      <form action="{{ url_for("pages.stats")}}" method="post">
-          <input type="submit" value="Convert" onclick="return confirm('Please confirm submission')">
+      <form action="{{ url_for("pages.statsmetric")}}" method="post">
+          <input type="submit" value="Submit" onclick="return confirm('Please confirm submission')">
       </form>
     </p>
   </body>

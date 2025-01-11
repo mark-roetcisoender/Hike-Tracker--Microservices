@@ -67,4 +67,16 @@
     border: 4px ridge #879595;
     margin-bottom: 2%;
   }
+
+  #modal {
+    display: none;
+    width: 300px;
+    height: 100px;
+    border: 1px solid #ccc;
+    background: #eee;
+  }
+
+  #modal :target {
+    display: block;
+  }
   

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}Add to Wishlist{% endblock title %}</h2>
+{% endblock header %}
+{% block content %}
+<p>
+    <h3>Enter Hike Details Below</h3>
+</p>
+<p>
+  <!-- Learn more about this project by visiting the <a href="{{ url_for('pages.about') }}">About page</a>. -->
+   <form action="{{ url_for("pages.addwishlist")}}" method="post">
+      <label for="hike_name">Hike Name: </label><br>
+      <input type="text" id="hike_name" name="hike_name"><br>
+      <label for="distance">Distance (miles): </label><br>
+      <input type="text" id="distance" name="distance"><br>
+      <label for="elevation">Elevation Gain (feet): </label><br>
+      <input type="text" id="elevation" name="elevation"><br>
+      <input type="submit" value="Submit" onclick="return confirm('Please confirm submission')">
+  </form>
+
+</p>
+{% endblock content %}

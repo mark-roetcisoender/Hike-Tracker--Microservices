@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}Hike Generator{% endblock title %}</h2>
+{% endblock header %}
+{% block content %}
+<p>
+    <h3>Find a suggested hike based on the hikes you've logged.</h3>
+    <h4>To Get Started, Click 'Find Hike'</h4>
+</p>
+<p>
+    <h4>No Hikes Logged!</h4>
+    <h5>Please log at least one hike</h5>
+</p>
+
+{% endblock content %}

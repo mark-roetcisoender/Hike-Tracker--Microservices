@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block header %}
+  <h2>{% block title %}Wishlist Hikes{% endblock title %}</h2>
+{% endblock header %}
+{% block content %}
+<p>
+    <h3>Your Wishlist Hikes are displayed below</h3>
+    <body>
+        <p><a href="{{ url_for('pages.addwishlist') }}">
+            <button>Add to Wishlist</button>
+        </a></p>
+        <table>
+            <thead>
+                <th>Hike Name</th>
+                <th>Distance</th>
+                <th>Elevation Gain</th>
+            </thead>
+            <tbody>
+                {% for row in current_wl %}
+                <tr>
+                      <td>{{row[0]}}</td>
+                      <td>{{row[1]}}</td>
+                      <td>{{row[2]}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</p>
+{% endblock content %}
